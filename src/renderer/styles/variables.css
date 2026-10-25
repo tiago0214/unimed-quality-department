@@ -1,53 +1,87 @@
-/* styles/variables.css */
 :root {
-  /* Colors - Light Mode (Default) */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f4f5f7;
-  --text-primary: #172b4d;
-  --text-muted: #6b778c;
-  --accent-color: #0052cc;
-  --border-color: #dfe1e6;
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --bg-canvas: var(--neutral-950); /* Deepest app background (#0a0a0a) */
+  --bg-surface: var(--neutral-900); /* Cards, sidebars, titlebar (#171717) */
+  --bg-elevated: var(
+    --neutral-800
+  ); /* Modals, dropdowns, hover states (#262626) */
+  --bg-spotlight: var(
+    --neutral-700
+  ); /* Active/selected item background (#404040) */
 
   /* Typography */
+  --text-primary: var(--neutral-50); /* Headings and main body text (#fafafa) */
+  --text-secondary: var(
+    --neutral-400
+  ); /* Subtitles and descriptions (#a3a3a3) */
+  --text-muted: var(
+    --neutral-500
+  ); /* Disabled text, placeholders, labels (#737373) */
+
+  /* Borders & Dividers */
+  --border-subtle: var(
+    --neutral-800
+  ); /* Hairline card/section borders (#262626) */
+  --border-default: var(
+    --neutral-700
+  ); /* Input & interactive borders (#404040) */
+  --border-focus: var(--neutral-400); /* Focused input ring (#a3a3a3) */
+
+  /* Interactive Elements */
+  --btn-primary-bg: var(--neutral-100);
+  --btn-primary-text: var(--neutral-900);
+  --btn-primary-hover: var(--white);
+
+  --btn-secondary-bg: var(--neutral-900);
+  --btn-secondary-text: var(--neutral-100);
+  --btn-secondary-border: var(--neutral-800);
+  --btn-secondary-hover: var(--neutral-800);
+
+  /* Layout & Radius Tokens */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-pill: 9999px;
+  --titlebar-height: 36px;
+
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  --font-size-sm: 12px;
-  --font-size-base: 14px;
-  --font-size-lg: 18px;
-
-  /* Spacing & Borders */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-
-  /* Electron-Specific Layout Tokens */
-  --titlebar-height: 32px;
-  --sidebar-width: 240px;
 }
 
-/* Automatic OS Dark Mode Support */
-/* Chromium automatically detects OS theme changes via Electron's nativeTheme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #1e1e1e;
-    --bg-secondary: #252526;
-    --text-primary: #cccccc;
-    --text-muted: #858585;
-    --accent-color: #3794ff;
-    --border-color: #3c3c3c;
-  }
-}
+[data-theme="light"] {
+  --bg-canvas: var(--white);
+  --bg-surface: var(--neutral-50);
+  --bg-elevated: var(--neutral-100);
+  --bg-spotlight: var(--neutral-200);
 
-/* Optional: Manual Theme Override via data-attribute */
-[data-theme="dark"] {
-  --bg-primary: #1e1e1e;
-  --bg-secondary: #252526;
-  --text-primary: #cccccc;
-  --text-muted: #858585;
-  --accent-color: #3794ff;
-  --border-color: #3c3c3c;
+  --text-primary: var(--neutral-950);
+  --text-secondary: var(--neutral-600);
+  --text-muted: var(--neutral-400);
+
+  --border-subtle: var(--neutral-200);
+  --border-default: var(--neutral-300);
+  --border-focus: var(--neutral-600);
+
+  --btn-primary-bg: var(--neutral-900);
+  --btn-primary-text: var(--neutral-50);
+  --btn-primary-hover: var(--neutral-800);
+
+  --btn-secondary-bg: var(--neutral-100);
+  --btn-secondary-text: var(--neutral-900);
+  --btn-secondary-border: var(--neutral-300);
+  --btn-secondary-hover: var(--neutral-200);
 }
