@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+#filePath {
+  font-size: 14px;
+}
+
+#sync {
+  margin-top: 16px;
+}
+
 .path-container {
   display: flex;
   justify-content: space-between;

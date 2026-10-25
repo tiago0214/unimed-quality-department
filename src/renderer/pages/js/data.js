@@ -1,6 +1,7 @@
 const filePathElement = document.getElementById("filePath");
 const selectBtn = document.getElementById("selectBtn");
 const tableRef = document.getElementById("table");
+const syncBtn = document.getElementById("sync");
 
 const data = [
   { date: "2026-08-16 15:30:78", status: "Executando", identifiedActions: 27 },
@@ -13,7 +14,7 @@ const data = [
 async function checkEtlDir() {
   const dir = (await electronAPI.etlDir()).trim();
   if (dir.length === 0 || !dir) {
-    filePathElement.innerText = "Directório do arquivo não informado";
+    filePathElement.innerText = "Directório dos arquivos não informado";
 
     return;
   }
@@ -24,6 +25,8 @@ selectBtn.addEventListener("click", async () => {
   const filePath = await electronAPI.openFile();
   if (filePath) filePathElement.innerText = filePath;
 });
+
+syncBtn.addEventListener("click", () => electronAPI.forceSync());
 
 checkEtlDir();
 
