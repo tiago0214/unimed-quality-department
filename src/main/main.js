@@ -1,17 +1,20 @@
-import { app, BrowserWindow, ipcMain, Menu } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
 
 const createWindow = () => {
+  const rawPath = import.meta.dirname.lastIndexOf("/");
+  const sanatizePath = import.meta.dirname.substring(0, rawPath);
+
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1600,
+    height: 1400,
     webPreferences: {
-      preload: path.join(import.meta.dirname, "preload.cjs"),
+      preload: path.join(sanatizePath, "/preload/preload.cjs"),
     },
   });
 
   win.menuBarVisible = false;
-  win.loadFile("index.html");
+  win.loadFile("./src/renderer/index.html");
 };
 
 app.whenReady().then(() => {

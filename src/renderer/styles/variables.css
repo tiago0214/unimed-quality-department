@@ -1,0 +1,53 @@
+/* styles/variables.css */
+:root {
+  /* Colors - Light Mode (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f5f7;
+  --text-primary: #172b4d;
+  --text-muted: #6b778c;
+  --accent-color: #0052cc;
+  --border-color: #dfe1e6;
+
+  /* Typography */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 18px;
+
+  /* Spacing & Borders */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Electron-Specific Layout Tokens */
+  --titlebar-height: 32px;
+  --sidebar-width: 240px;
+}
+
+/* Automatic OS Dark Mode Support */
+/* Chromium automatically detects OS theme changes via Electron's nativeTheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #252526;
+    --text-primary: #cccccc;
+    --text-muted: #858585;
+    --accent-color: #3794ff;
+    --border-color: #3c3c3c;
+  }
+}
+
+/* Optional: Manual Theme Override via data-attribute */
+[data-theme="dark"] {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --text-primary: #cccccc;
+  --text-muted: #858585;
+  --accent-color: #3794ff;
+  --border-color: #3c3c3c;
+}
