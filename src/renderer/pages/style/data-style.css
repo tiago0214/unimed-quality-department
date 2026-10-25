@@ -1,15 +1,41 @@
 .main-container {
   margin: auto;
   margin-top: 16px;
-  max-width: 80%;
-  padding: 14px 16px 14px 16px;
-  background-color: var(--color-card);
-  border-radius: 8px;
-  border: solid 1px var(--color-border);
+  max-width: 50%;
 }
 
 .path-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-card);
+  border-radius: 8px;
+  border: solid 1px var(--color-border);
+  padding: 14px 16px 14px 16px;
+}
+
+.table-container {
+  margin-top: 16px;
+  max-width: 100%;
+  background-color: var(--color-card);
+  border: solid 1px var(--color-border);
+  border-radius: 8px;
+  padding: 14px 16px 14px 16px;
+}
+
+.table-container > table {
+  width: 100%;
+}
+
+.table-container > table,
+th,
+td {
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  padding: 6px;
+}
+
+th {
+  font-weight: 700;
+  text-align: left;
 }
