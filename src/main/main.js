@@ -10,12 +10,6 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1600,
     height: 1400,
-    backgroundColor: "hsl(222 47% 6%)",
-    titleBarOverlay: {
-      color: "hsl(222 47% 6%)",
-      symbolColor: "#a3a3a3",
-      height: 36,
-    },
     webPreferences: {
       preload: path.join(sanatizePath, "/preload/preload.cjs"),
     },
