@@ -1,0 +1,24 @@
+{
+  "name": "unimed-quality-department",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/tiago0214/unimed-quality-department#readme",
+  "bugs": {
+    "url": "https://github.com/tiago0214/unimed-quality-department/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiago0214/unimed-quality-department.git"
+  },
+  "license": "ISC",
+  "author": "Tiago",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0"
+  }
+}
