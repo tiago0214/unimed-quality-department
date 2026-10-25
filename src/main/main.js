@@ -24,7 +24,7 @@ app.whenReady().then(() => {
   initializeOperationDB();
   ipcMain.handle("etlDir", verifyETLdir);
   ipcMain.handle("dialog:openFile", handleFileOpen);
-  ipcMain.on("action:forceSync", handleForceSync);
+  ipcMain.handle("action:forceSync", handleForceSync);
 
   createWindow();
 
