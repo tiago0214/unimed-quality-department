@@ -1,78 +1,154 @@
 :root {
-  --gray-50: #fafafa;
-  --gray-100: #f4f4f5;
-  --gray-200: #e4e4e7;
-  --gray-300: #d4d4d8;
-  --gray-400: #a1a1aa;
-  --gray-500: #71717a;
-  --gray-600: #52525b;
-  --gray-700: #3f3f46;
-  --gray-800: #27272a;
-  --gray-900: #18181b;
-  --gray-950: #09090b;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
 
-  --bg-app: var(--gray-950); /* App shell / sidebar background */
-  --bg-dashboard: #121215;
-  --bg-card: var(--gray-900); /* Chart widgets & KPI cards */
-  --bg-elevated: var(--gray-800); /* Filter dropdowns, tooltips, modals */
+  --color-border: hsl(222 25% 16%);
+  /* --color-border: hsl(var(--border-color-local)); */
+  --color-input: hsl(222 30% 14%);
+  --color-ring: hsl(156 84% 55%);
+  --color-background: hsl(222 47% 6%);
+  --color-foreground: hsl(150 15% 96%);
 
-  /* Data Table / Grid Specifics */
-  --table-header-bg: #1f1f23;
-  --table-row-hover: rgba(255, 255, 255, 0.03);
-  --table-row-stripe: rgba(255, 255, 255, 0.015);
-  --table-border: var(--gray-800);
+  --color-success: hsl(156 84% 55%);
+  --color-warning: hsl(38 95% 60%);
 
-  /* Typography */
-  --text-primary: var(
-    --gray-100
-  ); /* Slightly softer than pure white for tables */
-  --text-secondary: var(--gray-400); /* Axis labels, column headers */
-  --text-muted: var(--gray-500); /* Timestamps, SQL line numbers */
+  --color-primary: hsl(156 84% 55%);
+  --color-primary-foreground: hsl(222 47% 6%);
+  --color-primary-glow: hsl(162 90% 65%);
 
-  /* ==========================================================================
-     3. INTERACTIVE ACCENT (Indigo - For active filters, tabs & selected cells)
-     ========================================================================== */
-  --accent-primary: #6366f1; /* Indigo 500 */
-  --accent-hover: #818cf8; /* Indigo 400 */
-  --accent-subtle-bg: rgba(
-    99,
-    102,
-    241,
-    0.14
-  ); /* Selected row / active filter pill */
-  --accent-subtle-border: rgba(99, 102, 241, 0.35);
+  --color-secondary: hsl(222 30% 14%);
+  --color-secondary-foreground: hsl(150 15% 96%);
 
-  /* ==========================================================================
-     4. KPI & STATUS DELTAS (Growth, Churn, Alerts)
-     ========================================================================== */
-  /* Positive / Growth (+12.4%) */
-  --kpi-up-text: #34d399; /* Emerald 400 */
-  --kpi-up-bg: rgba(52, 211, 153, 0.12);
+  --color-destructive: hsl(0 75% 60%);
+  --color-destructive-foreground: hsl(150 15% 96%);
 
-  /* Negative / Drop (-4.8%) */
-  --kpi-down-text: #fb7185; /* Rose 400 (More legible on dark UI than pure red) */
-  --kpi-down-bg: rgba(251, 113, 133, 0.12);
+  --color-muted: hsl(222 25% 13%);
+  --color-muted-foreground: hsl(215 15% 60%);
 
-  /* Warning / Anomaly */
-  --kpi-warn-text: #fbbf24; /* Amber 400 */
-  --kpi-warn-bg: rgba(251, 191, 36, 0.12);
+  --color-accent: hsl(14 95% 65%);
+  --color-accent-foreground: hsl(222 47% 6%);
 
-  /* ==========================================================================
-     5. DATA VISUALIZATION PALETTE (6 High-Contrast Categorical Series)
-     ========================================================================== */
-  --chart-1: #38bdf8; /* Sky Blue     - Primary metric */
-  --chart-2: #818cf8; /* Indigo       - Comparison / Secondary metric */
-  --chart-3: #c084fc; /* Purple       - Category 3 */
-  --chart-4: #2dd4bf; /* Teal         - Category 4 */
-  --chart-5: #fb923c; /* Orange       - Category 5 */
-  --chart-6: #f472b6; /* Pink         - Category 6 */
+  --color-popover: hsl(222 40% 9%);
+  --color-popover-foreground: hsl(150 15% 96%);
 
-  /* Chart Structural Helpers */
-  --chart-gridline: rgba(255, 255, 255, 0.06); /* Very faint so data pops */
-  --chart-crosshair: var(--gray-500);
-  --chart-tooltip-bg: var(--gray-900);
+  --color-card: hsl(222 40% 9%);
+  --color-card-foreground: hsl(150 15% 96%);
 
-  --font-sans:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --color-sidebar: hsl(222 40% 9%);
+  --color-sidebar-foreground: hsl(150 15% 96%);
+  --color-sidebar-primary: hsl(156 84% 55%);
+  --color-sidebar-primary-foreground: hsl(222 47% 6%);
+  --color-sidebar-accent: hsl(222 30% 14%);
+  --color-sidebar-accent-foreground: hsl(150 15% 96%);
+  --color-sidebar-border: hsl(222 25% 16%);
+  --color-sidebar-ring: hsl(156 84% 55%);
+
+  --radius-lg: 1rem;
+  --radius-md: calc(1rem - 2px);
+  --radius-sm: calc(1rem - 4px);
+
+  /* Gradients */
+  --background-image-gradient-primary: linear-gradient(
+    135deg,
+    hsl(156 84% 55%),
+    hsl(168 85% 50%)
+  );
+  --background-image-gradient-hero: linear-gradient(
+    135deg,
+    hsl(156 84% 55%) 0%,
+    hsl(180 75% 50%) 50%,
+    hsl(200 80% 60%) 100%
+  );
+  --background-image-gradient-accent: linear-gradient(
+    135deg,
+    hsl(14 95% 65%),
+    hsl(35 95% 60%)
+  );
+  --background-image-gradient-card: linear-gradient(
+    180deg,
+    hsl(222 40% 11%) 0%,
+    hsl(222 40% 8%) 100%
+  );
+  --background-image-gradient-glow: radial-gradient(
+    circle at 50% 0%,
+    hsl(156 84% 55% / 0.25),
+    transparent 70%
+  );
+
+  /* Shadows */
+  --shadow-glow: 0 0 60px hsl(156 84% 55% / 0.35);
+  --shadow-card: 0 8px 30px -8px hsl(222 47% 0% / 0.5);
+  --shadow-elevated: 0 20px 60px -20px hsl(156 84% 55% / 0.3);
+  --shadow-soft: 0 4px 20px -4px hsl(222 47% 0% / 0.4);
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-scale-in: scale-in 0.4s ease-out forwards;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(156 84% 55% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(156 84% 55% / 0.7);
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
