@@ -38,4 +38,5 @@ td {
 th {
   font-weight: 700;
   text-align: left;
+  background-color: var(--color-secondary);
 }

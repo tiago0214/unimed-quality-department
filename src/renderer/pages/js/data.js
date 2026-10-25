@@ -6,6 +6,8 @@ const data = [
   { date: "2026-08-16 15:30:78", status: "Executando", identifiedActions: 27 },
   { date: "2026-08-15 15:30:78", status: "Completo", identifiedActions: 17 },
   { date: "2026-08-13 15:30:78", status: "Completo", identifiedActions: 32 },
+  { date: "2026-08-13 15:30:78", status: "Completo", identifiedActions: 32 },
+  { date: "2026-08-13 15:30:78", status: "Completo", identifiedActions: 32 },
 ];
 
 async function checkEtlDir() {
@@ -25,7 +27,7 @@ selectBtn.addEventListener("click", async () => {
 
 checkEtlDir();
 
-data.forEach((element) => {
+data.forEach((element, index) => {
   const tr = document.createElement("tr");
   const tdDate = document.createElement("td");
   tdDate.innerHTML = element.date;
@@ -35,6 +37,12 @@ data.forEach((element) => {
 
   const tdActions = document.createElement("td");
   tdActions.innerHTML = element.identifiedActions;
+
+  if (index % 2 != 0) {
+    tdDate.style = "background-color: var(--color-secondary)";
+    tdStatus.style = "background-color: var(--color-secondary)";
+    tdActions.style = "background-color: var(--color-secondary)";
+  }
 
   tr.appendChild(tdDate);
   tr.appendChild(tdStatus);
