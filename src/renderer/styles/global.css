@@ -1,4 +1,4 @@
-@import "../components/header.css";
+@import "./header.css";
 @import "./variables.css";
 
 * {
@@ -138,6 +138,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "cv11", "ss01";
+  font-family: var(--font-sans);
 }
 
 h1,

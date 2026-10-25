@@ -1,5 +1,6 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
+import { verifyETLpath } from "./initialization.js";
 
 const createWindow = () => {
   const rawPath = import.meta.dirname.lastIndexOf("/");
@@ -24,7 +25,7 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-  ipcMain.handle("ping", () => "pong");
+  ipcMain.handle("etl-dir", verifyETLpath);
 
   createWindow();
 

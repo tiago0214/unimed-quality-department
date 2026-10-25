@@ -6,7 +6,6 @@
   background-color: var(--color-card);
   border-bottom: 1px solid var(--color-border);
   font-weight: 700;
-  font-family: var(--font-sans);
   color: var(--color-card-foreground);
   /* font-size: var(--font-size-l); */
 }
