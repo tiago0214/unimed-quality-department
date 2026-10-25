@@ -170,3 +170,33 @@ input[type="number"] {
     radial-gradient(at 80% 0%, hsla(180, 75%, 50%, 0.027) 0px, transparent 50%),
     radial-gradient(at 80% 80%, hsla(14, 96%, 65%, 0.027) 0px, transparent 50%);
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px 16px 24px;
+  background-color: var(--color-card);
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 700;
+  color: var(--color-card-foreground);
+  /* font-size: var(--font-size-l); */
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--color-card-foreground);
+  background: var(--bg-card);
+  padding: 8px 14px;
+  font-size: 13px;
+  border: solid 1px var(--color-border);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}

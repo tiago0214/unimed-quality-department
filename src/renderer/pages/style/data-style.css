@@ -6,3 +6,9 @@
   background-color: var(--color-card);
   border-radius: 8px;
 }
+
+.path-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
