@@ -79,7 +79,8 @@
 
   /* Shadows (soft, light-theme) */
   --shadow-glow: 0 0 24px hsl(158 100% 30% / 0.15);
-  --shadow-card: 0 1px 3px hsl(215 25% 15% / 0.08), 0 1px 2px hsl(215 25% 15% / 0.06);
+  --shadow-card:
+    0 1px 3px hsl(215 25% 15% / 0.08), 0 1px 2px hsl(215 25% 15% / 0.06);
   --shadow-elevated: 0 8px 24px -8px hsl(215 25% 15% / 0.18);
   --shadow-soft: 0 2px 8px -2px hsl(215 25% 15% / 0.1);
 
