@@ -1,5 +1,6 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
-contextBridge.exposeInMainWorld("mainProcess", {
-  etlDir: () => ipcRenderer.invoke("etl-dir"),
+contextBridge.exposeInMainWorld("electronAPI", {
+  etlDir: () => ipcRenderer.invoke("etlDir"),
+  openFile: () => ipcRenderer.invoke("dialog:openFile"),
 });

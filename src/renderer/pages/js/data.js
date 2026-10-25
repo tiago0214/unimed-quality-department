@@ -1,13 +1,19 @@
-const pathCheck = document.getElementById("path-check");
+const filePathElement = document.getElementById("filePath");
+const selectBtn = document.getElementById("selectBtn");
 
 async function checkEtlDir() {
-  const dir = (await mainProcess.etlDir()).trim();
+  const dir = (await electronAPI.etlDir()).trim();
   if (dir.length === 0) {
-    pathCheck.innerHTML = "Directório do arquivo não informado";
+    filePathElement.innerText = "Directório do arquivo não informado";
 
     return;
   }
-  pathCheck.innerHTML = dir;
+  filePathElement.innerText = dir;
 }
+
+selectBtn.addEventListener("click", async () => {
+  const filePath = await electronAPI.openFile();
+  filePathElement.innerText = filePath;
+});
 
 checkEtlDir();

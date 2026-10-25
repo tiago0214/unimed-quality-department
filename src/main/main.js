@@ -1,6 +1,7 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
 import { verifyETLpath } from "./initialization.js";
+import { handleFileOpen } from "./os-actions.js";
 
 const createWindow = () => {
   const rawPath = import.meta.dirname.lastIndexOf("/");
@@ -25,7 +26,8 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-  ipcMain.handle("etl-dir", verifyETLpath);
+  ipcMain.handle("etlDir", verifyETLpath);
+  ipcMain.handle("dialog:openFile", handleFileOpen);
 
   createWindow();
 
