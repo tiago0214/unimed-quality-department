@@ -158,3 +158,10 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.mesh-bg {
+  background-image:
+    radial-gradient(at 20% 20%, hsl(156 84% 55% / 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsl(180 75% 50% / 0.12) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, hsl(14 95% 65% / 0.1) 0px, transparent 50%);
+}
