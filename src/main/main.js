@@ -8,9 +8,9 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1600,
     height: 1400,
-    backgroundColor: "#0a0a0a",
+    backgroundColor: "hsl(222 47% 6%)",
     titleBarOverlay: {
-      color: "#0a0a0a",
+      color: "hsl(222 47% 6%)",
       symbolColor: "#a3a3a3",
       height: 36,
     },
