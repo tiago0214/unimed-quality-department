@@ -1,5 +1,12 @@
 const filePathElement = document.getElementById("filePath");
 const selectBtn = document.getElementById("selectBtn");
+const tableRef = document.getElementById("table");
+
+const data = [
+  { date: "2026-08-16 15:30:78", status: "Executando", identifiedActions: 27 },
+  { date: "2026-08-15 15:30:78", status: "Completo", identifiedActions: 17 },
+  { date: "2026-08-13 15:30:78", status: "Completo", identifiedActions: 32 },
+];
 
 async function checkEtlDir() {
   const dir = (await electronAPI.etlDir()).trim();
@@ -17,3 +24,21 @@ selectBtn.addEventListener("click", async () => {
 });
 
 checkEtlDir();
+
+data.forEach((element) => {
+  const tr = document.createElement("tr");
+  const tdDate = document.createElement("td");
+  tdDate.innerHTML = element.date;
+
+  const tdStatus = document.createElement("td");
+  tdStatus.innerHTML = element.status;
+
+  const tdActions = document.createElement("td");
+  tdActions.innerHTML = element.identifiedActions;
+
+  tr.appendChild(tdDate);
+  tr.appendChild(tdStatus);
+  tr.appendChild(tdActions);
+
+  tableRef.appendChild(tr);
+});
