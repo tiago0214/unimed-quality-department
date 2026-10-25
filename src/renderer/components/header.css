@@ -17,8 +17,13 @@
   background: var(--bg-card);
   padding: 8px 14px;
   font-size: 13px;
+  border: solid 1px var(--color-border);
   border-radius: 6px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.header-container > span > a:hover {
+  background-color: var(--color-secondary);
 }

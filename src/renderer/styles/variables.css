@@ -16,7 +16,7 @@
   --color-primary-foreground: hsl(222 47% 6%);
   --color-primary-glow: hsl(162 90% 65%);
 
-  --color-secondary: hsl(222 30% 14%);
+  --color-secondary: hsl(222 30% 14%); /* I'm using for button hovers */
   --color-secondary-foreground: hsl(150 15% 96%);
 
   --color-destructive: hsl(0 75% 60%);
